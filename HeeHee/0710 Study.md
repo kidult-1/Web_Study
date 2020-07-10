@@ -77,7 +77,8 @@ $(function () {
 5. id가 member_f인 요소의 하위 요소 중 속성 값이 text인 요소를 선택한다.
 6. id가 member_f인 요소의 하위 요소 중 속성 값이 password인 요소를 선택한다.
    <br>
-   #HTML
+
+#HTML
 
 <section>
 <ul>
