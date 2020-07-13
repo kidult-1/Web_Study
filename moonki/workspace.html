@@ -2,27 +2,28 @@
   <head>
     <meta charset="utf-8">
     <title>Moonki html workspace</title>
+    <script src="func.js"></script>
     <style>
     span{
       font-weight: bold;
       color: coral;
     }
-    .hab{
+    .ki{
       color: red;
     }
-    #hong{
+    #moon{
       color: blue;
     }
     </style>
   </head>
 
   <body style="background-color:black;color:white">
-    <h1 style="background-color:coral"> 홍합 </h1>
+    <h1 style="background-color:coral">문기</h1>
     <p>
-      홍합<span>홍</span>합홍합홍합홍합홍<span>합</span>홍합<span>홍</span>합홍합홍합홍합홍합홍합홍합
-      <div id="hong">홍합</div>
-      <div class="hab">홍합</div>
-      <div>홍합</div>
+      문기<span>문</span>기문기문기문<span>기</span>문기<span>문</span>기문기문기문기문기
+      <div id="moon">문기</div>
+      <div class="ki">문기</div>
+      <div>문기</div>
       <input type="button" value="hi" onclick="alert('hi?')">
       <input type="text" onchange="alert('is changed')">
       <input type="text" onkeydown="alert('key toggle')">
@@ -33,27 +34,5 @@
     </p>
     <p id='loop_target'>
     </p>
-    <script type="text/javascript">
-    function Func(this_button){
-      var target = document.querySelector('body');
-      if(this_button.value === 'night'){
-        target.style.backgroundColor = 'black';
-        target.style.color = 'white';
-        this_button.value = 'day';
-      } else {
-        target.style.backgroundColor = 'white';
-        target.style.color = 'black';
-        this_button.value = 'night';
-      }
-    }
-    function make_loop(){
-      var target = document.getElementById('loop_target');
-      for(i = 0; i < 10; i++){
-        var new_li = document.createElement("li");
-        new_li.innerHTML = i;
-        target.appendChild(new_li);
-      }
-    }
-    </script>
   </body>
 </html>

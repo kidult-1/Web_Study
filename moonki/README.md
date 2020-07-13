@@ -5,7 +5,7 @@ javascript document
 
 https://developer.mozilla.org/ko/docs/Web/JavaScript
 
-생활코딩
+~~생활코딩~~
 
 https://opentutorials.org/course/3085
 
@@ -42,4 +42,5 @@ JavaScript 질문 목록
 https://typeofnan.dev/10-javascript-quiz-questions-and-answers/
 
 ## React
-추가예정
+
+https://opentutorials.org/module/4058
