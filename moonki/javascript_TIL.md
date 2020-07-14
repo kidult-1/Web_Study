@@ -92,6 +92,7 @@ javascipt는 네임스페이스가 없다.
 
 ### NaN과 Infinity
 `NaN`은 숫자가 아님을 의미 : Math.sqrt(-1)
+
 `Infinity`는 무한대를 의미 : 42 / 0
 
 ### 배열
@@ -159,6 +160,52 @@ var apple = new function() {
     };
 }
 ```
+
+## DOM
+문서 객체 모델(DOM; Document Object Model)
+
+객체 지향 모델로써 구조화된 문서를 표현하는 형식
+
+동적으로 HTML에 접근하고 변경하는 수단
+
+같은 코드가 여러 브라우저에서 동일하게 동작한다.
+
+### QuerySelector
+
+`getElementById()` : 반환값 객체
+
+`getElementsByClassName()` : 반환값 배열
+
+`getElementsByTagName()` : 반환값 배열
+
+`querySelector()` : css 선택자, 반환값 객체
+
+`querySelectorAll()` : css 선택자, 반환값 배열
+
+문서 전체에서 찾을 때에는 document 전역 변수 사용
+
+document뿐만 아니라 모든 객체 모델에 사용할 수 있다.
+
+        
+
+QuerySelector로 찾은 객체는 몇 가지 속성으로 접근할 수 있다.
+- id
+- className
+- tagName
+- value
+- style
+- innerHTML
+- outerHTML : 선택된 노드를 포함하여 HTML 수정
+
+사용자 정의 속성은 위와 같이 접근하지 못한다.
+
+다음 4가지 메소드로 접근할 수 있다.
+
+- getAttribute(name)
+- setAttribute(name, value)
+- hasAttribute(name)
+- removeAttribute(name)
+
 
 ## jQuery
 
