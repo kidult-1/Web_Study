@@ -1,0 +1,22 @@
+{
+  "name": "vscode",
+  "version": "1.0.0",
+  "description": "Hello, world!",
+  "main": "Hello.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zeze1004/VScode.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zeze1004/VScode/issues"
+  },
+  "homepage": "https://github.com/zeze1004/VScode#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
