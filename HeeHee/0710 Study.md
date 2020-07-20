@@ -1,4 +1,4 @@
-#Javascript
+<h1>Javascript</h1>
 도서 : <strong>자바스크립트+제이쿼리 입문</strong> (이지스퍼블리싱, 정인용 지음)
 
 <section>
@@ -19,25 +19,30 @@
 </section>
 <br>
 <h6>직접 선택자 예시</h6>
+
 ```javascript
 $(function(){
 	$("*").css("border","1px solid blue");
 });
 ```
+
 *은 모든 요소를 선택한다.
 1. 모든 요소의 두께를 1px 파란색 실선으로 지정하는 코드이다.
 <br>
 <h6>인접 관계 선택자 예시</h6>
+
 ```javascript
 $(function(){
 	$("#list_1").parent()
 	.css("border", "2px dashed #f00");
 });
 ```
+
 \#은 id를 뜻하는 기호이다.
 1. id값이 "list_1"인 요소의 부모 요소를 선택하여, 해당 요소의 두께를 2px 빨간색 파선으로 변경한다.
 <br>
 <h6>위치 탐색 선택자 예시</h6>
+
 ```javascript
 $(function(){
 	$("#menu li:first")
@@ -49,11 +54,13 @@ $(function(){
 });
 
 ````
+
 기본 선택자로 선택한 요소들은 배열의 형태로 저장된다.
 1. menu의 하위 요소의 배열에서 첫 번째 요소만을 선택하여 배경색을 바꾼다.
 2. menu의 하위 요소의 배열에서 마지막 요소만을 선택하여 배경색을 바꾸는 코드이다.
 <br>
 <h6>속성 탐색 선택자 예시</h6>
+
 ```javascript
 $(function () {
     $("#wrap a[target]").css({ color: "#f00" });
@@ -78,7 +85,7 @@ $(function () {
 6. id가 member_f인 요소의 하위 요소 중 속성 값이 password인 요소를 선택한다.
    <br>
 
-#HTML
+<h1>HTML</h1>
 
 <section>
 <ul>

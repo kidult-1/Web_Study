@@ -17,11 +17,13 @@ value
 </li>
 </ol>
 <h3>CSS</h3>
+
 ```css
 a {
   property: value;
 }
 ```
+
 <h4>Selector</h4>
 위 코드의 a가 CSS의 selector(선택자)이다. 어떤 태그에 효과를 적용할 것인지 작성하는 것이 selector이다. 
 <br>
