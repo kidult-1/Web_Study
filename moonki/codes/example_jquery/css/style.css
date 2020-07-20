@@ -1,0 +1,11 @@
+@charset "utf-8";
+h1, h2 {
+  color: #3fb8eb;
+}
+body {
+  font-size: 75%;
+  line-height: 2;
+  background: url('../images/night.png');
+  background-size: cover;
+  color: #ffffff;
+}

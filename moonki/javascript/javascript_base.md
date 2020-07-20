@@ -1,4 +1,4 @@
-# JavaScript 공부
+# JavaScript base
 
 ## 함수
 
@@ -186,7 +186,7 @@ var apple = new function() {
 
 document뿐만 아니라 모든 객체 모델에 사용할 수 있다.
 
-        
+
 
 QuerySelector로 찾은 객체는 몇 가지 속성으로 접근할 수 있다.
 - id
