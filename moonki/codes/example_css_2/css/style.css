@@ -1,0 +1,18 @@
+.grid {
+  border:15px solid pink;
+  margin: 50px;
+  display:grid;
+}
+div {
+  border:15px solid gray;
+  font-size: 30px;
+}
+#grid1 {
+  grid-template-columns: 350px 1fr;
+}
+#grid2 {
+  grid-template-columns: 1fr 1fr;
+}
+#grid3 {
+  grid-template-columns: 2fr 1fr;
+}
