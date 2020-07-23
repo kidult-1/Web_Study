@@ -1,0 +1,50 @@
+@charset "UTF-8";
+@import "reset.css";
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-jp.css);
+
+body {
+  padding: 20px;
+  background-color: #333333;
+}
+
+a.banner .name {
+  position: absolute;
+  top: 100px;
+  left: 90px;
+}
+
+p.desc {
+  position: absolute;
+  opacity: 0;
+  top: 150px;
+  left: 90px;
+  font: bold 19px/0 "Spoqa Han Sans JP";
+  color: #555555;
+}
+p.desc:hover, p.desc:focus {
+  opacity: 1;
+}
+
+a.banner {
+  position: absolute;
+  display: block;
+  width: 728px;
+  height: 176px;
+  border: 1px solid #555;
+  background:
+  url(../images/arrow.png) no-repeat 20px 140px,
+  url(../images/secret_weapon.png) no-repeat 20px 10px,
+  url(../images/moonki_face.png) no-repeat 620px 200px,
+  url(../images/moonki_potential.png) no-repeat 200px -10px,
+  url(../images/bg.png) no-repeat 0px 0px;
+  transition: all .5s ease-in .5s;
+}
+a.banner:hover, a.banner:focus {
+  background-position:
+    20px 140px,
+    20px 10px,
+    620px 130px,
+    200px -10px,
+    0px 0px;
+}
