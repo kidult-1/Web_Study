@@ -62,7 +62,7 @@ app.get('/message',function(req,res){
 //app.use(express.static('views.silverwo.png')); -> 은우사진 띄우기
 
 //DB연결 json 방식
-mongoose.connect('mongodb+srv://admin:cafe9192@mycluster.jezsv.gcp.mongodb.net/MyCluster?retryWrites=true&w=majority',{
+mongoose.connect('mongodb+srv://admin:password@mycluster.jezsv.gcp.mongodb.net/MyCluster?retryWrites=true&w=majority',{
     useNewUrlParser: true,
     useUnifiedTopology: true
     
