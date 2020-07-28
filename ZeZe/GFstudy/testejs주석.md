@@ -8,7 +8,7 @@ input 입력칸 생성
 1. 저장하는 버튼: my_button
 2. 찾는 버튼: my_button_find
 
-버튼 별로 누르면 이벤트 발생 되는 함수 만듦
+### 버튼 별로 누르면 이벤트 발생 되는 함수 만듦
 1. 저장 버튼 이벤트 <script> 함수
 $("#my_button").click(function (){}
 버튼을 클릭하면 click 되었다 라는 문구의 알람창이 뜨게 함
@@ -39,6 +39,8 @@ Delete: 삭제(DELETE)
 +
 정보조회(HEAD)
 
+###  send a message 눌렀을 때 발생되는 이벤트
+
 method: 'POST' => jquery 함수 중 POST를 사용하겠다란 뜻
 
 success: function(response) {
@@ -58,10 +60,15 @@ complete: function(response) {
 
 => error나 success 함수가 수행된 후 실행되는 함수
 
-###  find a message click 눌렀을 때 발생되는 이벤트
+###  find a message 눌렀을 때 발생되는 이벤트
 $("#my_button_find").click(function (){
 
-
+$.ajax({
+    method: 'GET', 
+    => 데이터 조회할 수 있게 함
+    url: '/message',
+    => localhost:port번호/message에서 데이터 조회 가능               
+    
 
 1.을 누르면 서버가 db에 접근?해서 값 저장
 client는 db에 접근하는게 아니라 서버에 값을 넘겨주기만 하면 된다
