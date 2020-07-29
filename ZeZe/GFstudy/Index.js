@@ -31,12 +31,14 @@ app.set('views', __dirname + '/views'); //__dirname + 폴더이름 : 절대 경�
     
 app.get('/', function(req,res){
     res.render('test.ejs',  //app.set에서 views폴더로 옮겼기 때문에 바로 ejs 파일명 작성
-    {       
+    { 
+    //0715 강의     
     //id라는 변수에 hello 입력
     //ejs 파일에 변수를 넣어준다
         id: 'hello',
         age: 2 //매개변수를 추가
     }); 
+
 });
 
 // test.ejs에서 my_button누르면 유저가 입력한 값을 서버가 받음?
@@ -76,12 +78,5 @@ mongoose.connect('mongodb+srv://admin:password@mycluster.jezsv.gcp.mongodb.net/M
         console.log("서버 성공");
     }
 });
-
-
-//서버 시작
-//httpServer.listen(8080); //포트 번호 8080으로 임의설정
-
-
-//express 사용
 
 console.log("hello, world!");
