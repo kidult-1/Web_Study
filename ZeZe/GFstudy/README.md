@@ -11,4 +11,9 @@ uostime 강의 두 번째 시간
 1. mongoose로 DB 연동
 2. jquery 맛보기
 
-### testejs주석.md + Indexjs주석.md 추가
+## 20 .07.28
+
+testejs주석.md + Indexjs주석.md 추가
+
+## 20.07.29
+Indexjs주석.md 작성 

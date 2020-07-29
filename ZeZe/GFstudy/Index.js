@@ -16,7 +16,7 @@ const MessageController = require('./controllers/MessageController');
 var app = express(); //앞서 정의한 상수를 함수처럼 호출
 var httpServer = http.createServer(app); //http 모듈 내의 서버생성 함수, http 만들어 줌
 
-//use body-parser
+//use body-parser : post로 요청된 body를 쉽게 추출할 수 있는 모듈이다
 app.use(express.urlencoded({extended:true}));
 app.use(express.json());
 
