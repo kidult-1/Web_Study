@@ -20,3 +20,4 @@ Indexjs주석.md 작성
 라우팅개념 정리
 paraser 개념 정리
 ejs 템플릿 언어
+app.get 개념 정리
