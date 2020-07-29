@@ -23,6 +23,7 @@ app.use(express.json());
 
 app.use(express.static('public')); //정적파일들(ex.이미지,css파일 등)은 바뀌지 않는다 -> 폴더 그대로 넘겨주면 띄운다
 
+//esj는 템플릿 엔진
 //view engine이라는 속성을 ejs로 바꾼다?????
 app.set('view engine', 'ejs');
 app.set('views', __dirname + '/views'); //__dirname + 폴더이름 : 절대 경로 , 앞으로 views폴더 따로 안써도 됌~
@@ -44,7 +45,7 @@ app.get('/', function(req,res){
 
 // test.ejs에서 my_button누르면 유저가 입력한 값을 서버가 받음?
 app.post('/message',function(req,res){
-    // req.body.message의 body는 test.ejs의 json key값들s
+    // req.body.message의 body는 test.ejs의 json key값들
     let message = req.body.message;
     // req는 서버가 요청하는 거, res는 서버가 받는 거
 
