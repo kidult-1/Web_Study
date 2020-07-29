@@ -17,7 +17,8 @@ var app = express(); //앞서 정의한 상수를 함수처럼 호출
 var httpServer = http.createServer(app); //http 모듈 내의 서버생성 함수, http 만들어 줌
 
 //use body-parser : post로 요청된 body를 쉽게 추출할 수 있는 모듈이다
-app.use(express.urlencoded({extended:true}));
+app.use(express.urlencoded({extended:false})); //주소 형식으로 데이터 보냄
+//extended:false or true 뭘 쓰든 오류 ㄴㄴ 왜??
 app.use(express.json());
 
 app.use(express.static('public')); //정적파일들(ex.이미지,css파일 등)은 바뀌지 않는다 -> 폴더 그대로 넘겨주면 띄운다
@@ -64,7 +65,7 @@ app.get('/message',function(req,res){
 //app.use(express.static('views.silverwo.png')); -> 은우사진 띄우기
 
 //DB연결 json 방식
-mongoose.connect('mongodb+srv://admin:password@mycluster.jezsv.gcp.mongodb.net/MyCluster?retryWrites=true&w=majority',{
+mongoose.connect('mongodb+srv://admin:cafe9192@mycluster.jezsv.gcp.mongodb.net/MyCluster?retryWrites=true&w=majority',{
     useNewUrlParser: true,
     useUnifiedTopology: true
     

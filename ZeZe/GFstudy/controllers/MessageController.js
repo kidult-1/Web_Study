@@ -1,5 +1,3 @@
-
-
 // 몽구스와의 소통할 수 있는 module -> models 폴더에 있는 Message.js 
 const Message = require('../models/Message');
 // Message.js에 data 전달

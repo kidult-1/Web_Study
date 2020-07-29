@@ -39,4 +39,12 @@ app.use(express.json());
 HTTP POST 요청시 request body에 들어오는 데이터값을 읽을 수 있는 구문으로 파싱함과 동시에 req.body로 입력해주어 응답 과정에서 body 매개변수를 새롭게 전달한게 해주는 미들웨어?????
 몬 솔???
 
-간단히 말해 
+간단히 말해 클라이언트가 데이터를 넣으면 test.ejs에서 POST한 내용이 url - endecode: 주소 형식으로 데이터를 보내고
+json 파일로 변환? 
+
+만약 본문이 텍스트 데이터일 때 해석하는 미들웨어는 Text.
+
+Text를 쓸려면 body-parser을 설치(json으로 해석해주는건 express 내장 모듈에 있어서 따로 설치할 필요x)하고
+
+app.use(bodyParser.text()); 사용
+
