@@ -68,11 +68,10 @@ app.set('views', '폴더명') : views는 템플릿 파일들이 위치한 폴더
 app.get('title')
 // => undefined
 
-app.set('title', 'My Site')
-app.get('title')
-// => "My Site"
+app.set('title', 'My Site') //app.set('키','값')
+app.get('title')            //app.get(set의 키)
+// => "My Site"             //set의 값 출력
 
-=> app.set이 저장한 키값 출려..?
 
 2. app.get(path, callback[,callback])
 
@@ -81,5 +80,11 @@ app.get('/', function (req, res) {
   res.send('GET request to homepage')
 })
 
-### app.set
+### app.use
+app.use는 미들웨어를 연결하는 부분
 
+### 미들웨어란?
+요청과 응답 중간에 위치
+app.use와 자주 사용
+app.use 매서드의 인자로 들어 있는 함수가 미들웨어 이다. 미들웨어는 use 메서드로 app에 장착한다. 
+몬 솔 ㅠ
