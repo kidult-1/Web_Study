@@ -88,3 +88,12 @@ app.use는 미들웨어를 연결하는 부분
 app.use와 자주 사용
 app.use 매서드의 인자로 들어 있는 함수가 미들웨어 이다. 미들웨어는 use 메서드로 app에 장착한다. 
 몬 솔 ㅠ
+
+### app.post
+예시.
+app.post('/', function (req, res) {
+  res.send('POST request to homepage')
+})
+
+app.post('/message',function(req,res){
+=> /message에서 key값들을 posting
