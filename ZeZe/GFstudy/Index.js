@@ -40,7 +40,6 @@ app.get('/', function(req,res){
         id: 'hello',
         age: 2 //매개변수를 추가
     }); 
-
 });
 
 // test.ejs에서 my_button누르면 유저가 입력한 값을 서버가 받음?
@@ -48,11 +47,9 @@ app.post('/message',function(req,res){
     // req.body.message의 body는 test.ejs의 json key값들
     let message = req.body.message;
     // req는 서버가 요청하는 거, res는 서버가 받는 거
-
     MessageController.createMessage(message); 
     console.log('user say: '+ message);
-    res.send('Server got a message: '+ message); 
-    
+    res.send('Server got a message: '+ message);    
 });
 
 //mybuttonFind(find a message)

@@ -17,3 +17,4 @@ testejs주석.md + Indexjs주석.md 추가
 
 ## 20.07.29
 Indexjs주석.md 작성 
+라우팅개념 정리

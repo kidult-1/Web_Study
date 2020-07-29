@@ -25,8 +25,8 @@ app = express();
 
 ### HTTP 메서드
 엄청 많다 대표적인게 set, use, get, post 등등
-
-1. get: 클라이언트가 서버에게 요청
+앗 위에 친구들은 http 메서드가 아니다
+test.ejs주석에 있는 친구들이 http 메서드!
 
 ### paraser 
 가지고 있는 데이터를 내가 원하는 형태의 데이터로 가공(parsing), 그 과정을 수행하는 메소드를 paraser이라 함
@@ -61,4 +61,25 @@ view engine 은 어떠한 종류의 템플릿 엔진을 사용할지 나타냄
 
 app.set('views', '폴더명') : views는 템플릿 파일들이 위치한 폴더 지정
 
-a
+### get
+
+1. app.get(name)
+예시.
+app.get('title')
+// => undefined
+
+app.set('title', 'My Site')
+app.get('title')
+// => "My Site"
+
+=> app.set이 저장한 키값 출려..?
+
+2. app.get(path, callback[,callback])
+
+예시.
+app.get('/', function (req, res) {
+  res.send('GET request to homepage')
+})
+
+### app.set
+
