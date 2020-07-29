@@ -47,7 +47,7 @@ app.post('/message',function(req,res){
     // req.body.message의 body는 test.ejs의 json key값들
     let message = req.body.message;
     // req는 서버가 요청하는 거, res는 서버가 받는 거
-    MessageController.createMessage(message); 
+    MessageController.createMessage(message); //db에 저장
     console.log('user say: '+ message);
     res.send('Server got a message: '+ message);    
 });
