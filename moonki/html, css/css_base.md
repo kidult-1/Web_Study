@@ -50,10 +50,20 @@ a.banner .name {
 `fixed` : (0, 0)을 기준으로 하며 스크롤을 해도 유지된다.
 
 
-
-
 ## 속기형 작성법
 
-background : color image repeat attachment position
+> background : color image repeat attachment position
 
-font: (font-style font-variant font-weight) font-size(/line-height) font-family
+> font : (font-style font-variant font-weight) font-size(/line-height) font-family
+
+> transition : transition-property transition-duration transition-timing-function transition-delay
+
+## 가상 클래스
+가상으로 클래스를 설정한 것처럼 작동하는 클래스
+
+하이퍼링크와 관련된 가상 클래스
+- `:link` : 하이퍼링크의 초기 상태
+- `:visited` : 하이퍼링크의 방문 상태
+- `:hover` : 마우스 포인터를 올려놓은 상태
+- `:active` : 마우스로 클린한 상태
+- `:focus` : 포커스된 상태를 식별, input / a / area
