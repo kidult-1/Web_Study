@@ -7,13 +7,20 @@ var template = require('./lib/template.js');
 //app.get('/', (req, res) => res.send('Hello World!'))
 app.get('/', function(request, response) { 
   fs.readdir('./data', function(error, filelist){
+
+    if (filelist == undefined) {
+        // folder may not exist
+        response.send('./data not found');
+        return;
+    }
+
     var title = 'Welcome';
     var description = 'Hello, Node.js';
     var list = template.list(filelist);
     var html = template.HTML(title, list,
       `<h2>${title}</h2>${description}`,
       `<a href="/create">create</a>`
-    ); 
+    );
     response.send(html);
   });
 });

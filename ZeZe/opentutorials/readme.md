@@ -3,3 +3,6 @@
 
 npm init : packge.json 파일 생성
 
+template.js의 
+filelist.length 오류 해결!
+
