@@ -81,4 +81,6 @@ breakpoint보다 크면 해당 width로 바뀐다.
 <div class="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-3">
 ```
 
+## document
+
 추가적인 정보는 [document](https://getbootstrap.com/docs/4.1/layout/grid/)를 참고
