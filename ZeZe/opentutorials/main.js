@@ -4,6 +4,9 @@ var fs = require('fs')
 var template = require('./lib/template.js')
 var sanitizeHtml = require('sanitize-html')
 var path = require('path')
+var qs = require('querystring')
+const { request } = require('http')
+const { response } = require('express')
  
 //route, routing
 //app.get('/', (req, res) => res.send('Hello World!'))
@@ -54,13 +57,30 @@ app.get('/page/:pageId', function(request, response) {
               <form action="delete_process" method="post">
                 <input type="hidden" name="id" value="${sanitizedTitle}">
                 <input type="submit" value="delete">
-              </form>`
-            );
+              </form>
+            `, '');
     //var html: string => 문자열이 사이트에 전송      
     response.send(html);
         });
     });
 });
+
+app.post('/create_process', function(req, res){
+    var body = '';
+    req.on('data', function(data){
+        body = body + data;
+    });
+    request.on('end',function(){
+        var post = qs.parse(body);
+        var title = post.title;
+        var description = post.description;
+        fs.writeFile('/data/${title}', description, 'utf8',function(err){
+            response.writeHead(302, {Location: '/?id=${title}'});
+            response.end()
+        })
+    })
+})
+
 app.listen(3000, function() {
 console.log('Example app listening on port 3000!')
 });
