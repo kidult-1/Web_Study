@@ -159,3 +159,8 @@ with Bootstrap we can make button components that have more styling
 [Bootstrap’s Card documentation](https://getbootstrap.com/docs/4.2/components/card/#example)
 
 [Bootstrap’s Carousel documentation](https://getbootstrap.com/docs/4.2/components/carousel/)
+
+
+codecademy : "Remember, it is extremely important to check Bootstrap documentation for instructions on component implementation!"
+
+animations and interactivity that requires the addition of Bootstrap’s JavaScript files.
