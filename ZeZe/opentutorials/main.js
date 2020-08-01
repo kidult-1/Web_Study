@@ -65,6 +65,25 @@ app.get('/page/:pageId', function(request, response) {
     });
 });
 
+app.get('/create', function(request, response){
+    fs.readdir('./data', function(error, filelist){
+      var title = 'WEB - create';
+      var list = template.list(filelist);
+      var html = template.HTML(title, list, `
+        <form action="/create_process" method="post">
+          <p><input type="text" name="title" placeholder="title"></p>
+          <p>
+            <textarea name="description" placeholder="description"></textarea>
+          </p>
+          <p>
+            <input type="submit">
+          </p>
+        </form>
+      `, '');
+      response.send(html);
+    });
+  });
+
 app.post('/create_process', function(req, res){
     var body = '';
     req.on('data', function(data){
