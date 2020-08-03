@@ -93,10 +93,16 @@
         $("#my_button_update").click(function (){
            //서버한테 요청, 응답
             let value = $("#my_input").val();
-            let author = $("#my_input").val();
+            let author = $("#my_author").val();
             $.ajax({
                     method: 'PUT', //RESTful API 개념을 알자
                     url: '/message',
+                    data: {
+                        //data도 json으로 넘겨줌
+                        message: value,
+                        author : author
+                        
+                    },
                     success: function(response) {
                         alert(JSON.stringify(response));
                     }

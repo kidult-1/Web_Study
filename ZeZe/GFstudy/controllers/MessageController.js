@@ -12,11 +12,8 @@ exports.createMessage = (content, author) => {  //exports. 로 달아주면 외�
             console.log(err);
             return;
         }
-
         //잘 저장된 것 같다
         console.log('잘 저장됨');
-
-
     });
 }
 // findUser였으면 조건 (id) 찾기
@@ -32,7 +29,7 @@ exports.findMessage= (res) => {
         console.log(message);
         //res.send(message.content); 그냥 message로만 받으면 날 것의 데이터까지 다 받음(db에 있는 content 내용만 전송 가능)
         
-        //저자도 같이 줄거니깐 json으로 전달
+        //저자도 같이 줄거니깐 json으로 전달(원래 res.send)
         res.json({
             content:message.content,
             author:message.author
@@ -52,5 +49,21 @@ exports.deleteMessage = (res) => {
         return
     }
     res.send("모두 삭제 완료")
+    })
+}
+
+// author를 기준으로 메세지를 수정해보자
+exports.updateMessage = (content,author) => {
+    //{} 이 안에는 삭제할 조건을 추가 
+    Message.updateOne({
+        author : author
+    }, {
+        content: content 
+    }, function(err, res){ //updateOne, updateMany 등등
+        if(err){
+            console.log(err);
+            return
+    }
+    console.log(res)
     })
 }

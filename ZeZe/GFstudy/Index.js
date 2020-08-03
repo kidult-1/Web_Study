@@ -64,6 +64,15 @@ app.delete('/message',function(req,res){
     MessageController.deleteMessage(res); 
 });
 
+app.put('/message',function(req,res){
+    // req.body.message의 body는 test.ejs의 json key값들
+    let message = req.body.message
+    let author = req.body.author
+    // req는 서버가 요청하는 거, res는 서버가 받는 거
+    MessageController.updateMessage(message,author); //db에 저장
+    console.log('update message: '+ message + ' 업데이트 ' + author);
+    res.send('업데이트 되어따 ');    
+});
 
 //app.use(express.static('views.silverwo.png')); 
 
