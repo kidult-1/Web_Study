@@ -17,8 +17,9 @@
 <!-- 저장하는 버튼 -->
     <button id="my_button">send a message</button>  
 <!-- 찾는 버튼 -->
-    <button id="my_button_find">find a message</button>
-
+    <button id="my_button_find">find a message</button> 
+    <button id="my_button_delete">delete all message</button>  
+    <button id="my_button_update">update a message</button>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
         /*
@@ -75,7 +76,32 @@
                         alert(JSON.stringify(response));
                     }
                 });
-        }); 
+        });
+        
+        $("#my_button_delete").click(function (){
+           //서버한테 요청, 응답
+
+            $.ajax({
+                    method: 'DELETE', //RESTful API 개념을 알자
+                    url: '/message',
+                    success: function(response) {
+                        alert(JSON.stringify(response));
+                    }
+                });
+        });
+
+        $("#my_button_update").click(function (){
+           //서버한테 요청, 응답
+            let value = $("#my_input").val();
+            let author = $("#my_input").val();
+            $.ajax({
+                    method: 'PUT', //RESTful API 개념을 알자
+                    url: '/message',
+                    success: function(response) {
+                        alert(JSON.stringify(response));
+                    }
+                });
+        });
     </script>
 
 </body>

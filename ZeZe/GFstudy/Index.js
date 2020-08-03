@@ -59,6 +59,10 @@ app.get('/message',function(req,res){
  
 });
 
+// delete: 삭제만 해서 따로 추가 기능 ㄴㄴ
+app.delete('/message',function(req,res){
+    MessageController.deleteMessage(res); 
+});
 
 
 //app.use(express.static('views.silverwo.png')); 
