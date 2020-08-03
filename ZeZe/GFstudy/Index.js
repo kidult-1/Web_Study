@@ -45,10 +45,11 @@ app.get('/', function(req,res){
 // test.ejs에서 my_button누르면 유저가 입력한 값을 서버가 받음?
 app.post('/message',function(req,res){
     // req.body.message의 body는 test.ejs의 json key값들
-    let message = req.body.message;
+    let message = req.body.message
+    let author = req.body.author
     // req는 서버가 요청하는 거, res는 서버가 받는 거
     MessageController.createMessage(message); //db에 저장
-    console.log('user say: '+ message);
+    console.log('user say: '+ message + ' author is ' + author);
     res.send('Server got a message: '+ message);    
 });
 
@@ -65,7 +66,8 @@ app.get('/message',function(req,res){
 //DB연결 json 방식
 mongoose.connect('mongodb+srv://admin:cafe9192@mycluster.jezsv.gcp.mongodb.net/MyCluster?retryWrites=true&w=majority',{
     useNewUrlParser: true,
-    useUnifiedTopology: true
+    useUnifiedTopology: true,
+    useCreateIndex: true
     
 }, function(err){
     if(err){

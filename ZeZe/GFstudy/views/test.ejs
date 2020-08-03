@@ -6,7 +6,12 @@
     <title>Document</title>
 </head>
 <body>
+    
+    <label for="my_author">author</label>
+    <input id="my_author" type="text">
+
     <!-- input은 안닫아도 ㅇㅋㅇㅋ -->
+    <label for="my_input">content</label>
     <input id="my_input" type="text">
     <!-- 버튼 id로 객체 설정 -->
 <!-- 저장하는 버튼 -->
@@ -34,7 +39,7 @@
             */
            //value에 my_input의 객체 값 넘김
             let value = $("#my_input").val();
-
+            let author =$("#my_author").val();
             //서버로 보내자
             //서버한테 요청, 응답
 
@@ -46,14 +51,15 @@
                     url: '/message', //localhost:8080/message에 입력 데이터 뜸(처음 입력한 데이터인 hello만)
                     data: {
                         //data도 json으로 넘겨줌
-                        message: value
+                        message: value,
+                        author : author
                         
                     },
                     // method의 값이 post로
                     method: 'POST', //RESTful API 개념을 알자
                     // 서버 응답 받기(서버가 응답 받으면 이 함수 쓴다: 비동기적 함수?)
                     success: function(response) {
-                        alert(response);
+                        alert(response)
                     }
                 });
         }); 
@@ -66,7 +72,7 @@
                     method: 'GET', //RESTful API 개념을 알자
                     url: '/message',
                     success: function(response) {
-                        alert(response);
+                        alert(JSON.stringify(response));
                     }
                 });
         }); 
