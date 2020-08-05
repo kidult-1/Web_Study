@@ -48,9 +48,8 @@ app.post('/message',function(req,res){
     let message = req.body.message
     let author = req.body.author
     // req는 서버가 요청하는 거, res는 서버가 받는 거
-    MessageController.createMessage(message, author); //db에 저장
+    MessageController.createMessage(res, message, author); //db에 저장
     console.log('user say: '+ message + ' author is ' + author);
-    res.send('Server got a message: '+ message);    
 });
 
 //mybuttonFind(find a message)
@@ -90,6 +89,7 @@ mongoose.connect('mongodb+srv://admin:cafe9192@mycluster.jezsv.gcp.mongodb.net/M
         httpServer.listen(8080);
         // 실행 성공 시 뜨는 로그
         console.log("서버 성공");
+        console.log("http://localhost:8080")
     }
 });
 
