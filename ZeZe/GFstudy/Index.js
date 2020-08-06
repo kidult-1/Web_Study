@@ -43,7 +43,7 @@ app.get('/', function(req,res){
 });
 
 // test.ejs에서 my_button누르면 유저가 입력한 값을 서버가 받음?
-app.post('/message',function(req,res){
+app.post('/message',function(req,res){  // app(서버)가 /message 경로로 오는 post 요청을 받고 => 함수 실행
     // req.body.message의 body는 test.ejs의 json key값들
     let message = req.body.message
     let author = req.body.author
@@ -53,7 +53,7 @@ app.post('/message',function(req,res){
 });
 
 //mybuttonFind(find a message)
-app.get('/message',function(req,res){
+app.get('/message',function(req,res){   // app(서버)가 /message 경로로 오는 get 요청을 받고 => 함수 실행
     MessageController.findMessage(res);
  
 });
