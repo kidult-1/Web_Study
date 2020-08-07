@@ -9,7 +9,7 @@ exports.createMessage = (res, content, author) => {  //exports. 로 달아주면
     }, function(err,result){
         //create 과정에서 오류가 있었으면 그거 출력하고 끝내
         if(err){
-            //console.log(err);
+            console.log('대충 author 중복된 듯')
             res.send("author가 중복되었다")
             return;
         }
