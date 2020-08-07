@@ -10,12 +10,12 @@ exports.createMessage = (res, content, author) => {  //exports. 로 달아주면
         //create 과정에서 오류가 있었으면 그거 출력하고 끝내
         if(err){
             //console.log(err);
-            res.send("이메일이 중복되었다")
+            res.send("author가 중복되었다")
             return;
         }
         //잘 저장된 것 같다
         console.log('잘 저장됨');
-        res.send('회원가입 성공했습니다')
+        res.send('데이터가 성공적으로 저장 됐습니다')
     });
 }
 // findUser였으면 조건 (id) 찾기
