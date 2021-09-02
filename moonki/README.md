@@ -9,7 +9,7 @@
 - ofcourse https://ofcourse.kr/js-course/
 
 
-## Javascript 관련 온라인 학습자료
+## (참고) Javascript 관련 온라인 학습자료
 - avascript document https://developer.mozilla.org/ko/docs/Web/JavaScript
 - Just JavaScript https://justjavascript.com/
 - JavaScript online free books https://exploringjs.com/
